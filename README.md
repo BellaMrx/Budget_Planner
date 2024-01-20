@@ -13,4 +13,4 @@ Preview
 
 Preview mobile view
 
- <img src="images/Preview_Budget_Planer_Mobile.PNG" width="100">
+ <img src="images/Preview_Budget_Planer_Mobile.PNG" width="200">
