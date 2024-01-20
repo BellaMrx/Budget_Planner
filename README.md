@@ -1,8 +1,8 @@
-# Budget_Planer
+# Budget_Planner
 
 build with JavaScript, HTMl, CSS
 
-Try out the Budget Planer here [book-of-coding.com](https://book-of-coding.com/build_projects.html#budget-planer)
+Try out the Budget Planer here [book-of-coding.com](https://book-of-coding.com/build_projects.html#budget-planner)
 
 Icons(assets) --> https://fontawesome.com/
 
