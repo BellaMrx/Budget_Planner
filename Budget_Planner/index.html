@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="book-of-coding.com - Budget Planner - learn to code " />
+    <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="assets/fontawesome/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" id="mode-link" href="styles/darkmode.css">
+    <title>Budget Planner</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="container">
+        <!-- Header -->
+        <header class="header">
+          <h1 class="main-headline"><i class="fa-solid fa-coins"></i>BUDGET</h1>
+            <button class="main-btn-dark-light-mode" title="Dark/Light-Mode"><i id="icon1" onclick="changeIcon('icon1')" class="fa fa-sun"></i></button>
+            <!-- <i class="fa fa-moon"></i> --> 
+        </header> 
+          <main class="main-container"> 
+            <button class="collapsible active" type="button" title="Income"><i class="fa fa-arrow-up"></i></button>
+              <div class="collapsible-content">
+                <h2>Income</h2>
+                <table class="table-inputs" id="table-income"> 
+                  <thead>
+                    <tr>
+                      <th class="table-usage">Usage</th>
+                      <th class="table-value">Value</th>
+                    </tr>
+                 </thead>
+                <tbody id="row-income">
+                  <tr>
+                    <td class="table-usage"><input type="text" class="inputs" onclick="this.select();" /></td>
+                    <td class="table-value"><input type="number" class="value-table inputs" onclick="this.select();" onchange="calculateIncome(); diff()" onkeyup="calculateIncome(); diff()"/></td>
+                    <td><input type="button" class="inputButton" value="X" onclick="deleteRowIncome(this)" /></td> 
+                  </tr>
+                </tbody>
+                  <tfoot>
+                    <tr>
+                      <td class="table-total">Total:</td>
+                      <td class="table-value"><div id="sum-income">0</div></td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <!-- button new row --> 
+                <input class="addRowButton" type="button" value="Add Row" onclick="addRowIncome()"/> 
+              </div>
+            <button class="collapsible active" type="button" title="Expenses"><i class="fa fa-arrow-down"></i></button>
+              <div class="collapsible-content">
+                <h2>Expenses</h2>
+                <table class="table-inputs" id="table-expenses"> 
+                  <thead>
+                    <tr>
+                      <th class="table-usage">Usage</th>
+                      <th class="table-value">Value</th>
+                    </tr>
+                 </thead>
+                <tbody id="row-expenses">
+                  <tr>
+                    <td class="table-usage"><input type="text" class="inputs" onclick="this.select();" /></td>
+                    <td class="table-value"><input type="number" class="value-table inputs" onclick="this.select();" onchange="calculateExpenses(); diff()" onkeyup="calculateExpenses(); diff()"/></td>
+                    <td class="table-button"><input type="button" class="inputButton" value="X" onclick="deleteRowExpenses(this)" /></td> 
+                  </tr>
+                </tbody>
+                  <tfoot>
+                    <tr>
+                      <td class="table-total">Total:</td>
+                      <td class="table-value" ><div id="sum-expenses">0</div></td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <!-- button new row --> 
+                <input class="addRowButton" type="button" value="Add Row" onclick="addRowExpenses()" /> 
+              </div>
+            <button class="collapsible active" type="button" title="Overview"><i class="fa fa-square-poll-vertical"></i></button>
+              <div class="collapsible-content">
+                <h2>Overview</h2>
+                <table class="table-inputs">
+                  <tr>
+                    <th class="table-overview">Income</th>
+                    <th class="table-overview">Expenses</th>
+                  </tr>
+                  <tr>
+                    <td class="table-overview"><p id="incomeTotal">0</p></td>
+                    <td class="table-overview"><p id="expensesTotal">0</p></td>
+                  </tr>
+                </table>
+                <span class="diff">Difference:</span>
+                <span class="diff" id="difference">0</span>
+                <br>
+                <span class="diffMessage" id="overviewResultMessage"></span>
+                <br>
+              </div>
+          </main>
+        <br>  
+        <footer>
+          <a href="https://github.com/BellaMrx" class="footer-contact fa-brands fa-github" title="GitHub Profile"><span class="footer-span">BellaMrx</span></a>
+          <a href="https://twitter.com/bella_mrx" class="footer-contact fa-brands fa-twitter" title="Twitter"><span class="footer-span">@bella_mrx</span></a>
+        </footer>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
